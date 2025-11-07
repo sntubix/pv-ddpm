@@ -1,0 +1,242 @@
+[
+  {
+    "Desc": "bckgnd",
+    "Label": 0,
+    "Attribute": "Feature",
+    "Importance": "-",
+    "Source": "-",
+    "Explanation": "Background identifies all the spaces in the EL image not associated with other defects and features. The background class accounts for the majority of pixels in every image. Importantly, the grain boundaries seen in the multi-c-si wafers are labeled as background. Mono-c-si wafers do not show these grain boundaries characteristic of multi-c-si wafers."
+  },
+  {
+    "Desc": "sp multi",
+    "Label": 1,
+    "Attribute": "Feature",
+    "Importance": "-",
+    "Source": "-",
+    "Explanation": "Spacing multi identifies the gaps between adjacent multi-c-si cells assembled into the PV module. Multi-c-si wafers are cut from square ingots, so the corners of each cell have a sharp corner."
+  },
+  {
+    "Desc": "sp mono",
+    "Label": 2,
+    "Attribute": "Feature",
+    "Importance": "-",
+    "Source": "-",
+    "Explanation": "Spacing mono identifies the gaps between adjacent mono-c-si cells assembled into the PV module. Mono-c-si wafers are cut from round ingots, so the corners of each cell tend to have a rounded shape. In some modern mono-c-si cells, the rounded corners have been reduced making it difficult to be sure about the wafer type. The surface of mono-c-si wafers is uniform, lacking any dark regions associated with difference crystallographic regions."
+  },
+  {
+    "Desc": "sp dogbone",
+    "Label": 3,
+    "Attribute": "Feature",
+    "Importance": "-",
+    "Source": "-",
+    "Explanation": "Spacing dogbone identifies the gaps between adjacent back-contact cells that have been assembled with ‘dogbone’ shaped interconnect. Adjacent cells are typically connected with interconnect ribbons that can be see on the frontside of every cell in the module. Back-contact cells do not have any metal on the frontside, and the dogbone interconnect is used instead of the ribbons. The dogbone shape only appears between the series connected cell separated by a horizontal space, not between the adjacent cells separated by a vertical space."
+  },
+  {
+    "Desc": "ribbons",
+    "Label": 4,
+    "Attribute": "Feature",
+    "Importance": "-",
+    "Source": "-",
+    "Explanation": "Ribbons identifies the interconnect wires that connect the adjacent cells in series. These ribbons typically run in a vertical orientation from the top to the bottom of the module. Each ribbon connects the top side of one cell to the bottom side of the next cell in series, creating a positive-to-negative-to-positive series that strings all the cells in the module together. In this way, the individual cell voltages of approximately 0.6V build to approximately 36 V for a 60-cell module and 43 V for a 72-cell module. The ribbons bend at the edges of adjacent cells creating stress at the edges which can lead to the crack ribbon edge defect when not assembled correctly."
+  },
+  {
+    "Desc": "border",
+    "Label": 5,
+    "Attribute": "Feature",
+    "Importance": "-",
+    "Source": "-",
+    "Explanation": "Border identifies the space between the edge of a cell and the outside edge of the module. The is similar to the cell spacing layer, except there is no adjacent cell on the other side of the border. The space between the cell and the edge of a module is typically wider than the space between adjacent cells due to the design requirements of the international standards for PV module type approval. A minimum distance must be maintained between the active area of the cell and edge of the laminate to minimize the risk of shock through creepage pathways."
+  },
+  {
+    "Desc": "text",
+    "Label": 6,
+    "Attribute": "Feature",
+    "Importance": "-",
+    "Source": "-",
+    "Explanation": "Text identifies text that may be scribed into the glass or otherwise marked on the module to provide a unique identifier."
+  },
+  {
+    "Desc": "padding",
+    "Label": 7,
+    "Attribute": "Feature",
+    "Importance": "-",
+    "Source": "-",
+    "Explanation": "Padding identifies the region around the cell that was added during the pre-processing. This is not an actual feature of a PV module, nor is it any kind of defect. The padding is added during pre-processing to maintain the full cell at the centre of every image."
+  },
+  {
+    "Desc": "clamp",
+    "Label": 8,
+    "Attribute": "Feature",
+    "Importance": "-",
+    "Source": "-",
+    "Explanation": "Clamp identifies a region at the module edge that is used to hold the module in place during EL imaging. If the clamp extends over the active area of the cell, it will create a dark region in the EL image. This is not a feature or a defect, but rather a measurement artifact."
+  },
+  {
+    "Desc": "busbars",
+    "Label": 9,
+    "Attribute": "Feature",
+    "Importance": "-",
+    "Source": "-",
+    "Explanation": "Busbars identifies the region of the module where adjacent columns of cells are connected with a thick metal busbar. Each column of a crystalline silicon wafer-based module consists of series-connected cells that are isolated from the cells in the columns to the left and right. The busbar connects two adjacent columns at the top of the module and the bottom of the module which allows all the cells to be connected in series as one long string of cells."
+  },
+  {
+    "Desc": "frame edge",
+    "Label": 21,
+    "Attribute": "Feature",
+    "Importance": "-",
+    "Source": "-",
+    "Explanation": "Frame edge identifies the four edges of the module frame. PV modules are typically framed in aluminum to provide rigidity and protection during handling. The frame edge is often seen in the module-level EL images as the top lip of the frame wraps over the border region."
+  },
+  {
+    "Desc": "jbox",
+    "Label": 22,
+    "Attribute": "Feature",
+    "Importance": "-",
+    "Source": "-",
+    "Explanation": "Junction box identifies the location where the busbars are connected to the standard leads. Technically, the junction box is a polymer enclosure inside which the busbars are connected to leads that protrude from the junction box. Since all the electrically active parts of the enclosure are covered, they should not show any light regions. The images with junction box features in this dataset were taken before the junction box was attached or the lid was closed. The standard leads that protrude from the junction are used to connect adjacent modules together in series or parallel to build up the string voltage or current, respectively."
+  },
+  {
+    "Desc": "sp mono halfcut",
+    "Label": 24,
+    "Attribute": "Feature",
+    "Importance": "-",
+    "Source": "-",
+    "Explanation": "Spacing mono half-cut identifies the gaps between adjacent mono-c-si half-cut cells assembled into the PV module. These cells are cut from round ingots that exhibit rounded corners on all four corners creating a pqeudo-square shape. When the pseudo-square is cut in half, then two corners are rounded and two corners are square. By contrast, the half-cut cells made from multi-c-si wafers are square on all four corners jsut like the full-sized wafers cut frommulti-c-si ingots."
+  },
+  {
+    "Desc": "crack rbn edge",
+    "Label": 10,
+    "Attribute": "Defect",
+    "Importance": "High",
+    "Source": "Factory",
+    "Explanation": "Crack ribbon edge identifies a short crack with origins at the edge of the cell where the interconnect ribbon folder over the cell edge. The crack has a minimal impact at this stage, but it is likely to increase over time leading to longer cracks and potentially inactive areas that impact performance. A model that can detect this small defect would be highly valuable to the manufacturer so that the source of the cracks can be rectified."
+  },
+  {
+    "Desc": "inactive",
+    "Label": 11,
+    "Attribute": "Defect",
+    "Importance": "High",
+    "Source": "Field",
+    "Explanation": " Inactive region identifies a region of the solar cell that has been completely disconnected from the rest of the cell due to a severe crack. The inactive region will continue to generate electron-hole pairs when exposed to the sun. Still, the electrons recombine in place because there are no alternative current paths to the cell circuit in the module. This type of cracking may lead to hot spots."
+  },
+  {
+    "Desc": "rings",
+    "Label": 12,
+    "Attribute": "Defect",
+    "Importance": "Low",
+    "Source": "Factory",
+    "Explanation": "Rings identify a region of the solar cell impacted by handling during manufacturing. The rings are formed by contaminated suction cups used to move the cells in the factory."
+  },
+  {
+    "Desc": "material",
+    "Label": 13,
+    "Attribute": "Defect",
+    "Importance": "Medium",
+    "Source": "Unknown",
+    "Explanation": "Material defects identify a dark area of the cell that is not readily assignable to other classes. This is a catch-all, or ‘other’, category of defects."
+  },
+  {
+    "Desc": "crack",
+    "Label": 14,
+    "Attribute": "Defect",
+    "Importance": "High",
+    "Source": "Field",
+    "Explanation": "Cracks identify micro-cracks in the silicon solar cell. Cracks can lead to degraded module prformance by creating hotspots and inactive areas. Cells with cracks running perpendicular to the interconnect ribbons ar susceptible to further degradation if the cracks expand, but less severely than cells with cracks running parallel to the interconnect ribbons. Cracks parallel to the interconnect ribbon are more likely to lead to inactive regions. The risk of cracks leading to large inactive regions is reduced in modern PV module architectures assembled with more interconnect ribbons than in earlier generations assembled with two or three interconnect ribbons."
+  },
+  {
+    "Desc": "gridline",
+    "Label": 15,
+    "Attribute": "Defect",
+    "Importance": "Medium",
+    "Source": "Factory",
+    "Explanation": "Gridline defects identify a region of the cell with missing, broken, or delaminated grid finger lines. Missing or broken grid fingers are generally stable, and their influence is captured in the cell’s efficiency. Grid finger adhesion may degrade over time, degrading the module performance."
+  },
+  {
+    "Desc": "splice",
+    "Label": 16,
+    "Attribute": "Defect",
+    "Importance": "Low",
+    "Source": "Artifact",
+    "Explanation": "Splice is not a defect nor a feature, but it was assigned to the defect group early on in the development of the dataset. The splice identifies a long, narrow line in the EL image corresponding to an artefact of the measurement. Some EL imaging stations will use multiple cameras and stitch them together with software to provide a module-level image. The splice identifies the regions where the separate images come together. They were included in the training to minimise confusion with other classes such as spacing, gridlines, and interconnect ribbons with long, narrow shapes."
+  },
+  {
+    "Desc": "dead cell",
+    "Label": 17,
+    "Attribute": "Defect",
+    "Importance": "Low",
+    "Source": "Factory",
+    "Explanation": "Dark cell identifies cell-wide lower minority carrier lifetime. This may occur from a lower minority carrier lifetime based on the position of the wafer in the ingot from which it came and the impurities in the wafer that are inherently contained. Such defects may be alternatively associated with cell shunting."
+  },
+  {
+    "Desc": "corrosion rbn",
+    "Label": 18,
+    "Attribute": "Defect",
+    "Importance": "High",
+    "Source": "Factory",
+    "Explanation": "Corrosion ribbon identifies regions around the interconnect ribbons impacted by solder flux interaction with the grid finger metallization-silicon interface. This may indicate a substandard soldering process leading to higher series resistance, hot spots, module degradation, and failure. These defects, which degrade performance, increase over time with elevated humidity."
+  },
+  {
+    "Desc": "belt mark",
+    "Label": 19,
+    "Attribute": "Defect",
+    "Importance": "Medium",
+    "Source": "Factory",
+    "Explanation": "Belt mark identifies dark regions of the cell that developed during cell firing. After the frontside metallisation is printed onto the solar cell, the cell is placed on a conveyor belt that carries it through a high-temperature furnace to harden the silver paste and bond it with the silicon. This defect often resembles a tyre track or herringbone pattern that mirrors the conveyor belt. Belt mark defects are generally stable over time, and the impact is captured in the initial efficiency of the cell and module."
+  },
+  {
+    "Desc": "edge dark",
+    "Label": 20,
+    "Attribute": "Defect",
+    "Importance": "Medium",
+    "Source": "Factory",
+    "Explanation": "Dark edge identifies cell regions with reduced lifetime from the silicon casting process. They occur over particular grains or regions of the ingot that contain elevated defect or impurity concentrations. They are generally stable over time, and their influence is largely captured by the initial efficiency of the cell and module."
+  },
+  {
+    "Desc": "meas artifact",
+    "Label": 23,
+    "Attribute": "Defect",
+    "Importance": "Low",
+    "Source": "Artifact",
+    "Explanation": "Measurement artefact identifies a bright area of the cell that is not readily assignable to other classes. Bright spots can occur in the EL image if the light is not properly controlled during the imaging process. This is a catch-all, or ‘other’, category of defects for bright regions. The dataset contains only a few images with this defect."
+  },
+  {
+    "Desc": "scuff",
+    "Label": 25,
+    "Attribute": "Defect",
+    "Importance": "High",
+    "Source": "Field",
+    "Explanation": "Scuff identifies a region of the module that was damaged during handling, especially modules with polymer backsheets. Polymer backsheets are rather pliable, so when an object is dragged along the back-side of a module with sufficient pressure, the scuff defect appears in the EL image. This defect may also exhibit micro-cracks emanating from the scuff if the pressure on the backsheet was especially high. The scuff defect may also carry over to adjacent cells."
+  },
+  {
+    "Desc": "corrosion cell",
+    "Label": 26,
+    "Attribute": "Defect",
+    "Importance": "High",
+    "Source": "Field",
+    "Explanation": "Corrosion cell identifies the region of a cell that has been corroded from the outside edges inward. This defect can occur along all four edges and may be worse on corner cells where two edges of the cell are close to the module perimeter. This corrosion may be due to humidity that has passed through the polymer backsheet between two adjacent cells or cracks."
+  },
+  {
+    "Desc": "brightening",
+    "Label": 27,
+    "Attribute": "Defect",
+    "Importance": "High",
+    "Source": "Factory",
+    "Explanation": "Brightening identifies regions of the cell that are significantly brighter along some interconnect ribbons than others. The defective region of the cell corresponds to the darker regions, although the model was trained to find the brighter regions. The dark regions indicate improper interconnection or tab ribbon bonding. Series resistance is elevated over the cell regions associated with improper interconnection or tab ribbon bonding. The increased resistance leads to a higher current forced through other regions, which yields a higher probability of hot spots and module failure."
+  },
+  {
+    "Desc": "star",
+    "Label": 28,
+    "Attribute": "Defect",
+    "Importance": "High",
+    "Source": "Field",
+    "Explanation": "Star identifies a small cell region impacted by a point force. Similar to the scuff defect, the point defect results from an object that hits the backsheet once compared to an object dragged across the surface, leading to a scuff defect. The star defect may also exhibit cracks emanating from the centre, giving it a star-like appearance."
+  },
+  {
+    "Desc": "sp multi halfcut",
+    "Label": 29,
+    "Attribute": "Feature",
+    "Importance": "-",
+    "Source": "-",
+    "Explanation": "Spacing multi half-cut identifies the gaps between adjacent multi-c-si half-cut cells assembled into the PV module. The half-cut cells made from multi-c-si wafers are square on all four corners jsut like the full-sized wafers cut from multi-c-si ingots."
+  }
+]

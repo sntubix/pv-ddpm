@@ -1,0 +1,20 @@
+name: pv-diffusion
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.8.10
+  - pip
+  - nvidia-apex
+  - pip:
+      - torch==1.13.1+cu116
+      - torchvision==0.14.1+cu116
+      - torchaudio==0.13.1
+      - imgaug
+      - tqdm
+      - einops
+      - tensorboard
+      - dropbox
+      - wandb
+      - pandas
+      - --extra-index-url https://download.pytorch.org/whl/cu116
