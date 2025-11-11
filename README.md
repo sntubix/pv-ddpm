@@ -11,13 +11,13 @@ E-SCDD dataset available at: https://huggingface.co/datasets/shivahanifi/extende
 <img width="1366" height="801" alt="Screenshot from 2025-11-11 14-47-29" src="https://github.com/user-attachments/assets/73fc3bd5-3d49-4d0a-8f36-f7b24e8796a9" />
 
 ## Getting Started
-### Environment Setup
+### 1. Environment Setup
 
 ```bash
 conda env create -f environment.yml
 conda activate pv-diffusion
 ```
-### Download Pretrained Weights 
+### 2. Download Pretrained Weights 
 
 ```bash
 mkdir models
@@ -26,7 +26,7 @@ gdown --id 1xBTqsSK193FjicpVUAs-1n04C2nt6Qmz
 
 ```
 
-### Training
+### 3. Training
 ```bash
 python train.py --dataset_path <path to dataset> --resume_weight <path tp pretrained weights>
 ```
