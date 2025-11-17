@@ -33,6 +33,24 @@ python train.py --dataset_path <path to dataset> --resume_weight <path tp pretra
 
 ## Citation
 
-If you use PV-DDPM or E-SCDD in your research, please cite this work:
+If you use PV-DDPM or E-SCDD in your research, please cite these work:
 ```
+@misc{hanifi2025bridgingdatagapspatially,
+      title={Bridging the Data Gap: Spatially Conditioned Diffusion Model for Anomaly Generation in Photovoltaic Electroluminescence Images}, 
+      author={Shiva Hanifi and Sasan Jafarnejad and Marc Köntges and Andrej Wentnagel and Andreas Kokkas and Raphael Frank},
+      year={2025},
+      eprint={2511.09604},
+      archivePrefix={arXiv},
+      primaryClass={eess.IV},
+      url={https://arxiv.org/abs/2511.09604}, 
+}
+
+@article{pratt2023benchmark,
+      title={A benchmark dataset for defect detection and classification in electroluminescence images of PV modules using semantic segmentation},
+      author={Pratt, Lawrence and Mattheus, Jana and Klein, Richard},
+      journal={Systems and Soft Computing},
+      pages={200048},
+      year={2023},
+      publisher={Elsevier} }
+
 ```
